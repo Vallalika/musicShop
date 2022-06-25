@@ -1,5 +1,6 @@
 package items.musicInstrumentTest;
 
+import items.Description;
 import items.musicInstrument.GuitarType;
 import items.musicInstrument.InstrumentCategory;
 import items.musicInstrument.Keyboard;
@@ -15,7 +16,7 @@ public class KeyboardTest {
 
     @Before
     public void before() {
-        myPiano = new Keyboard(InstrumentCategory.KEYBOARD,"Yamaha", 162,"spruce", 50000,80000,KeyboardType.BABY_GRAND_PIANO.BABY_GRAND_PIANO,88);
+        myPiano = new Keyboard(50000,80000,InstrumentCategory.KEYBOARD,"Yamaha", 162,"spruce", KeyboardType.BABY_GRAND_PIANO.BABY_GRAND_PIANO,88);
     }
 
     @Test
@@ -52,6 +53,11 @@ public class KeyboardTest {
     @Test
     public void canPlay() {
         assertEquals("do re mi fa sol la si do",myPiano.play());
+    }
+
+    @Test
+    public void HasDescription() {
+        assertEquals(Description.MUSICAL_INSTRUMENT,myPiano.getDescription());
     }
 
 }

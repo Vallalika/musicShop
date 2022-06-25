@@ -1,5 +1,6 @@
 package items.musicInstrumentTest;
 
+import items.Description;
 import items.musicInstrument.GuitarType;
 import items.musicInstrument.InstrumentCategory;
 import items.musicInstrument.Trumpet;
@@ -15,7 +16,7 @@ public class TrumpetTest {
 
     @Before
     public void before() {
-        myTrumpet = new Trumpet(InstrumentCategory.TRUMPET,"Yamaha",60,"brass",1500, 2000 ,TrumpetType.C);
+        myTrumpet = new Trumpet(1500, 2000 ,InstrumentCategory.TRUMPET,"Yamaha",60,"brass",TrumpetType.C);
     }
 
     @Test
@@ -48,4 +49,8 @@ public class TrumpetTest {
         assertEquals("Pwooo pwwwwwwwwwiiiiiiiit",myTrumpet.play());
     }
 
+    @Test
+    public void hasDescription() {
+        assertEquals(Description.MUSICAL_INSTRUMENT,myTrumpet.getDescription());
+    }
 }

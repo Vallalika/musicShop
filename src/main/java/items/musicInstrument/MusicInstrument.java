@@ -2,8 +2,10 @@ package items.musicInstrument;
 
 import behaviours.IPlay;
 import behaviours.ISell;
+import items.Description;
+import items.ItemsForSale;
 
-public abstract class MusicInstrument implements ISell, IPlay {
+public abstract class MusicInstrument extends ItemsForSale implements IPlay {
 
     private InstrumentCategory category;
     private String brand;
@@ -12,13 +14,12 @@ public abstract class MusicInstrument implements ISell, IPlay {
     private double buyPrice;
     private double sellPrice;
 
-    public MusicInstrument(InstrumentCategory category,  String brand, double size, String material, double buyPrice, double sellPrice) {
+    public MusicInstrument(double buyPrice, double sellPrice,InstrumentCategory category,  String brand, double size, String material) {
+        super(Description.MUSICAL_INSTRUMENT, buyPrice, sellPrice);
         this.category = category;
         this.brand = brand;
         this.size = size;
         this.material = material;
-        this.buyPrice = buyPrice;
-        this.sellPrice = sellPrice;
     }
 
     public InstrumentCategory getCategory() {
@@ -37,16 +38,5 @@ public abstract class MusicInstrument implements ISell, IPlay {
         return material;
     }
 
-    public double getBuyPrice() {
-        return buyPrice;
-    }
 
-    public double getSellPrice() {
-        return sellPrice;
-    }
-
-    public double calculateMarkup() {
-        double markup = this.sellPrice-this.buyPrice;
-        return markup;
-    }
 }

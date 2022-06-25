@@ -6,8 +6,8 @@ public class Keyboard extends MusicInstrument {
     private int numberOfPedals;
     private KeyboardType type;
 
-    public Keyboard(InstrumentCategory category, String brand, double size, String material, double buyPrice, double sellPrice,KeyboardType type, int numberOfKeys) {
-        super(category, brand, size, material, buyPrice, sellPrice);
+    public Keyboard(double buyPrice, double sellPrice, InstrumentCategory category, String brand, double size, String material, KeyboardType type, int numberOfKeys) {
+        super(buyPrice, sellPrice,category, brand, size, material);
         this.type = type;
         this.numberOfKeys = numberOfKeys;
         this.numberOfPedals = 3;

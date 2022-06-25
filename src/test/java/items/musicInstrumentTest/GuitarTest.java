@@ -1,5 +1,6 @@
 package items.musicInstrumentTest;
 
+import items.Description;
 import items.musicInstrument.Guitar;
 import items.musicInstrument.GuitarType;
 import items.musicInstrument.InstrumentCategory;
@@ -14,7 +15,7 @@ public class GuitarTest {
 
     @Before
     public void before() {
-        myGuitar = new Guitar(InstrumentCategory.GUITAR, "Epiphone", 96.5,"ebony", 80,125 ,GuitarType.ACOUSTIC,6,"steel");
+        myGuitar = new Guitar(80,125 ,InstrumentCategory.GUITAR, "Epiphone", 96.5,"ebony",GuitarType.ACOUSTIC,6,"steel");
     }
 
     @Test
@@ -50,5 +51,10 @@ public class GuitarTest {
     @Test
     public void canPlay() {
         assertEquals("Piiiiing ponnnnnnng",myGuitar.play());
+    }
+
+    @Test
+    public void hasDescription() {
+        assertEquals(Description.MUSICAL_INSTRUMENT,myGuitar.getDescription());
     }
 }

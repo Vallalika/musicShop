@@ -5,8 +5,8 @@ public class Trumpet extends MusicInstrument {
     private int numberOfValves;
     private TrumpetType type;
 
-    public Trumpet(InstrumentCategory category, String brand, double size, String material, double buyPrice, double sellPrice,TrumpetType type) {
-        super(category, brand, size, material, buyPrice, sellPrice);
+    public Trumpet(double buyPrice, double sellPrice,InstrumentCategory category, String brand, double size, String material, TrumpetType type) {
+        super(buyPrice, sellPrice, category,brand, size, material);
         this.type = type;
         this.numberOfValves = 3;
     }
