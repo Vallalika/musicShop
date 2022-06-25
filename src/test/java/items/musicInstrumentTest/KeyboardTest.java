@@ -1,4 +1,4 @@
-package items;
+package items.musicInstrumentTest;
 
 import items.musicInstrument.GuitarType;
 import items.musicInstrument.InstrumentCategory;
