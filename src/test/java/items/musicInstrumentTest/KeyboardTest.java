@@ -47,7 +47,6 @@ public class KeyboardTest {
     @Test
     public void canCalculateMarkupPrice() {
         assertEquals(30000.00,myPiano.calculateMarkup(),0.05);
-
     }
 
     @Test
