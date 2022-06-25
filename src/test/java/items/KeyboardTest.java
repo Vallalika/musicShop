@@ -1,6 +1,7 @@
 package items;
 
 import items.musicInstrument.GuitarType;
+import items.musicInstrument.InstrumentCategory;
 import items.musicInstrument.Keyboard;
 import items.musicInstrument.KeyboardType;
 import org.junit.Before;
@@ -14,7 +15,7 @@ public class KeyboardTest {
 
     @Before
     public void before() {
-        myPiano = new Keyboard(KeyboardType.BABY_GRAND_PIANO,88);
+        myPiano = new Keyboard(InstrumentCategory.KEYBOARD,"Yamaha", 162,"spruce", 50000,80000,KeyboardType.BABY_GRAND_PIANO.BABY_GRAND_PIANO,88);
     }
 
     @Test
@@ -30,6 +31,16 @@ public class KeyboardTest {
     @Test
     public void hasThreePedals() {
         assertEquals(3, myPiano.getNumberOfPedals());
+    }
+
+    @Test
+    public void canGetPropertiesFromSuper() {
+        assertEquals(InstrumentCategory.KEYBOARD,myPiano.getCategory());
+        assertEquals("Yamaha",myPiano.getBrand());
+        assertEquals(162,myPiano.getSize(),0.00);
+        assertEquals("spruce",myPiano.getMaterial());
+        assertEquals(50000,myPiano.getBuyPrice(), 0.00);
+        assertEquals(80000,myPiano.getSellPrice(), 0.00);
     }
 
 }

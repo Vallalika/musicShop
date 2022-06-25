@@ -1,12 +1,13 @@
 package items.musicInstrument;
 
-public class Keyboard {
+public class Keyboard extends MusicInstrument {
 
     private int numberOfKeys;
     private int numberOfPedals;
     private KeyboardType type;
 
-    public Keyboard(KeyboardType type, int numberOfKeys) {
+    public Keyboard(InstrumentCategory category, String brand, double size, String material, double buyPrice, double sellPrice,KeyboardType type, int numberOfKeys) {
+        super(category, brand, size, material, buyPrice, sellPrice);
         this.type = type;
         this.numberOfKeys = numberOfKeys;
         this.numberOfPedals = 3;

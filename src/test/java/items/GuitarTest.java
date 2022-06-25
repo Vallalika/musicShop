@@ -14,7 +14,7 @@ public class GuitarTest {
 
     @Before
     public void before() {
-        myGuitar = new Guitar(InstrumentCategory.GUITAR, "Epiphone", 96.5,"steel", 80,125 ,GuitarType.ACOUSTIC,6,"steel");
+        myGuitar = new Guitar(InstrumentCategory.GUITAR, "Epiphone", 96.5,"ebony", 80,125 ,GuitarType.ACOUSTIC,6,"steel");
     }
 
     @Test
@@ -29,7 +29,7 @@ public class GuitarTest {
 
     @Test
     public void canGetStringMaterial() {
-        assertEquals("steel", myGuitar.getStringMaterial());
+        assertEquals("ebony", myGuitar.getStringMaterial());
     }
 
     @Test
