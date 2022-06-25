@@ -17,4 +17,28 @@ public abstract class MusicInstrument {
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
     }
+
+    public InstrumentCategory getCategory() {
+        return category;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public double getSize() {
+        return size;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public double getBuyPrice() {
+        return buyPrice;
+    }
+
+    public double getSellPrice() {
+        return sellPrice;
+    }
 }
