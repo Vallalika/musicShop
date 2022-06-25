@@ -24,4 +24,10 @@ public class Guitar extends MusicInstrument {
     public String getStringMaterial() {
         return stringMaterial;
     }
+
+    @Override
+    public String play() {
+        return "Piiiiing ponnnnnnng";
+    }
+
 }

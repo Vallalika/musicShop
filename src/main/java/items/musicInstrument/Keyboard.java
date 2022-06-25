@@ -24,4 +24,9 @@ public class Keyboard extends MusicInstrument {
     public int getNumberOfPedals() {
         return numberOfPedals;
     }
+
+    @Override
+    public String play() {
+        return "do re mi fa sol la si do";
+    }
 }

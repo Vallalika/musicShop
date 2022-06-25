@@ -29,7 +29,7 @@ public class GuitarTest {
 
     @Test
     public void canGetStringMaterial() {
-        assertEquals("ebony", myGuitar.getStringMaterial());
+        assertEquals("steel", myGuitar.getStringMaterial());
     }
 
     @Test
@@ -37,8 +37,18 @@ public class GuitarTest {
         assertEquals(InstrumentCategory.GUITAR,myGuitar.getCategory());
         assertEquals("Epiphone",myGuitar.getBrand());
         assertEquals(96.5,myGuitar.getSize(),0.00);
-        assertEquals("steel",myGuitar.getMaterial());
+        assertEquals("ebony",myGuitar.getMaterial());
         assertEquals(80,myGuitar.getBuyPrice(), 0.00);
         assertEquals(125,myGuitar.getSellPrice(), 0.00);
+    }
+
+    @Test
+    public void canCalculateMarkupPrice() {
+        assertEquals(45.00,myGuitar.calculateMarkup(),0.05);
+    }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Piiiiing ponnnnnnng",myGuitar.play());
     }
 }

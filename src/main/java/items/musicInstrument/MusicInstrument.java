@@ -1,6 +1,9 @@
 package items.musicInstrument;
 
-public abstract class MusicInstrument {
+import behaviours.IPlay;
+import behaviours.ISell;
+
+public abstract class MusicInstrument implements ISell, IPlay {
 
     private InstrumentCategory category;
     private String brand;
@@ -40,5 +43,10 @@ public abstract class MusicInstrument {
 
     public double getSellPrice() {
         return sellPrice;
+    }
+
+    public double calculateMarkup() {
+        double markup = this.sellPrice-this.buyPrice;
+        return markup;
     }
 }

@@ -43,4 +43,15 @@ public class KeyboardTest {
         assertEquals(80000,myPiano.getSellPrice(), 0.00);
     }
 
+    @Test
+    public void canCalculateMarkupPrice() {
+        assertEquals(30000.00,myPiano.calculateMarkup(),0.05);
+
+    }
+
+    @Test
+    public void canPlay() {
+        assertEquals("do re mi fa sol la si do",myPiano.play());
+    }
+
 }

@@ -20,4 +20,9 @@ public class Trumpet extends MusicInstrument {
     }
 
 
+    @Override
+    public String play() {
+        return "Pwooo pwwwwwwwwwiiiiiiiit";
+    }
+
 }

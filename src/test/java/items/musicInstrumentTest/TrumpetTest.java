@@ -38,4 +38,14 @@ public class TrumpetTest {
         assertEquals(2000,myTrumpet.getSellPrice(), 0.00);
     }
 
+    @Test
+    public void canCalculateMarkupPrice() {
+        assertEquals(500.00,myTrumpet.calculateMarkup(),0.05);
+    }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Pwooo pwwwwwwwwwiiiiiiiit",myTrumpet.play());
+    }
+
 }
